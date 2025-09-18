@@ -1,17 +1,17 @@
-import Comment from "./comment";
 import data from "../../data.json";
 import { useEffect, useState } from "react";
+import SingleComment from "./SingleComment";
 
-const Comments = () => {
+const CommentsList = () => {
   const [comments, setComments] = useState(undefined);
   useEffect(() => {
     setComments(data.comments);
   }, []);
   return (
     <div className="w-full mx-auto p-4 ">
-      <Comment comments={comments} />
+      <SingleComment comments={comments} />
     </div>
   );
 };
 
-export default Comments;
+export default CommentsList;

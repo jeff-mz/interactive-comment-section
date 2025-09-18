@@ -2,7 +2,7 @@ import replyicon from "../assets/images/icon-reply.svg";
 import editicon from "../assets/images/icon-edit.svg";
 import deleteicon from "../assets/images/icon-delete.svg";
 
-const Comment = ({ comments }) => {
+const SingleComment = ({ comments }) => {
   return (
     <>
       {comments?.length > 0 &&
@@ -169,7 +169,7 @@ const Comment = ({ comments }) => {
 
               {comment.replies?.length > 0 && (
                 <div className="ml-6 border-l-2 border-neutral-200 pl-4">
-                  <Comment comments={comment.replies} />
+                  <SingleComment comments={comment.replies} />
                 </div>
               )}
             </div>
@@ -179,4 +179,4 @@ const Comment = ({ comments }) => {
   );
 };
 
-export default Comment;
+export default SingleComment;

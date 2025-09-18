@@ -1,10 +1,11 @@
+import Comments from "./components/comments";
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-primary-200">
-        Hello world!
-      </h1>
-    </div>
+    <main className="w-full min-h-screen py-28 bg-neutral-100">
+      <div className="container mx-auto">
+        <Comments />
+      </div>
+    </main>
   );
 };
 

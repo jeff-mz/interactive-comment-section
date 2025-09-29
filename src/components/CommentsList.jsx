@@ -101,27 +101,25 @@ const CommentsList = () => {
 
       {/* Global Add Comment Box */}
       {currentUser && (
-        <div className="bg-white p-4 rounded-xl shadow-sm w-full sm:w-10/12 mx-auto mt-6 flex sm:flex-row flex-col items-start gap-3 relative">
+        <div className="bg-white p-4 rounded-xl shadow-sm w-full sm:w-10/12 mx-auto mt-6 flex sm:flex-row flex-col items-start gap-3">
           <img
             src={currentUser.image?.png || currentUser.image}
             alt={currentUser.username}
             className="w-8 h-8 rounded-full"
           />
-          <div className="flex-1 relative">
-            <textarea
-              value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
-              placeholder="Add a comment..."
-              className="w-full border border-neutral-300 rounded-lg p-2 pr-24 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500"
-              rows="3"
-            />
-            <button
-              onClick={handleAddComment}
-              className="absolute bottom-2 right-2 bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-500"
-            >
-              Send now
-            </button>
-          </div>
+          <textarea
+            value={newComment}
+            onChange={(e) => setNewComment(e.target.value)}
+            placeholder="Add a comment..."
+            className="w-9/12 sm:w-12/12 border border-neutral-300 rounded-lg p-2 pr-24 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500"
+            rows="3"
+          />
+          <button
+            onClick={handleAddComment}
+            className="w-2/12 right-2 bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-500"
+          >
+            Send now
+          </button>
         </div>
       )}
     </div>
